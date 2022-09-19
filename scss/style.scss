@@ -1,0 +1,40 @@
+@use './common';
+@use './common/layout' as ui;
+@use './common/animation' as anim;
+@use './common/colors' as color;
+
+body {
+    @include ui.flex();
+    // min-height: 500vh;
+    h1 {
+        text-align: center;
+        font-size: 1.5em;
+        color: color.color("text", $mix : 90, $opacity : 90);
+    }
+
+    .icon {
+        width: 100px;
+    }
+
+    a:has(.cli) {
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .cli {
+        background-color: #fff;
+        padding: 1em 2em;
+        font-size: 0.8em;
+        border-radius: 100vmax;
+        margin-block: 20px;
+        filter: invert(1);
+        color: #000;
+        @include anim.press(200);
+    }
+
+    .lastTxt {
+        font-weight: 500;
+        font-size: 0.8em;
+        color: color.color();
+        // color: color.color('accent');
+    }
+}
