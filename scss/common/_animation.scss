@@ -1,7 +1,9 @@
 // Hover effect and 
+@use "sass:math";
+
 @mixin press($dur : 200, $scale : 90) {
     transition:all #{$dur}ms;
     &:active {
-        scale: $scale / 100;
+        scale: math.div($scale, 100);
     }
 }
