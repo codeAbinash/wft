@@ -9,7 +9,7 @@ body {
     h1 {
         text-align: center;
         font-size: 1.5em;
-        color: color.color("text", $mix : 90, $opacity : 90);
+        color: color.color("text", $mix : 90%, $opacity : 90);
     }
 
     .icon {
